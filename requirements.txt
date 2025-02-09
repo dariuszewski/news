@@ -1,2 +1,4 @@
 Django~=5.0.0
 black~=25.1.0
+django-crispy-forms==2.2
+crispy-bootstrap5==2024.2
