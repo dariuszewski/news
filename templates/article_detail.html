@@ -8,8 +8,12 @@
     <p>{{ object.body }}</p>
 </div>
 <div>
-    <p><a href="{% url 'article_edit' article.pk %}">Edit</a></p>
-    <p><a href="{% url 'article_delete' article.pk %}">Delete</a></p>
+    {% if article.author.pk == request.user.pk %}
+    <div class="card-footer text-center text-muted">
+        <a href="{% url 'article_edit' article.pk %}">Edit</a>
+        <a href="{% url 'article_delete' article.pk %}">Delete</a>
+    </div>
+    {% endif %}
     <p>Back to <a href="{% url 'article_list' %}">All Articles</a>.</p>
 </div>
 {% endblock content %}
