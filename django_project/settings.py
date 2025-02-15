@@ -18,8 +18,8 @@ SECRET_KEY = env.str("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool("DEBUG", default=False)
 
-ALLOWED_HOSTS = ["127.0.0.1", "localhost"]
-CSRF_TRUSTED_ORIGINS = ["https://127.0.0.1", "https://localhost"]
+ALLOWED_HOSTS = [".herokuapp.com", "127.0.0.1", "localhost"]
+CSRF_TRUSTED_ORIGINS = ["https://*.herokuapp.com"]
 
 # Application definition
 
